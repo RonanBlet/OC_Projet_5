@@ -1,7 +1,8 @@
-function Banner() {
+function Banner({image, text, showOverlay}) {
     return (
-        <div>
-            <h2>Chez vous, partout et ailleurs</h2>
+        <div class ='banner' style={{ backgroundImage: `url(${image})` }} >
+            {showOverlay && <div class='overlay'></div>}
+            {text && <p>{text}</p>}
         </div>
     );
 };

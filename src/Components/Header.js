@@ -1,13 +1,15 @@
 import React from "react";
-
+import logo from '../Images/LOGO.png';
 function Header(){
     return(
         <header>
-            <h1>Kasa</h1>
+            <span>
+                <img src={logo} alt="logo du site Kasa"/>
+            </span>
             <nav>
                 <ul>
                     <li><a href='/'>Accueil</a></li>
-                    <li><a href='/about'>A propos</a></li>
+                    <li id="about"><a href='/about'>A propos</a></li>
                 </ul>
             </nav>
         </header>

@@ -1,8 +1,13 @@
-function Card(titre) {
+import {Link} from 'react-router-dom';
+
+function Card({id,title,cover}) {
     return(
-        <div>
-            <p>titre</p>
-        </div>
+      <div className="card">
+      <Link to={`/details/${id}`}>
+        <h3>{title}</h3>
+        <img src={cover} alt={title} />
+      </Link>
+    </div>
     );
 };
 
