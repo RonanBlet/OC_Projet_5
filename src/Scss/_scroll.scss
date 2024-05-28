@@ -1,0 +1,27 @@
+.collapsible {
+    width: 90%;
+
+    .toggle-button {
+      background-color: #ff6b6b;
+      color: white;
+      border: none;
+      padding: 15px 20px;
+      font-size: 18;
+      font-weight: 700;
+      cursor: pointer;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+  
+  
+    .content {
+      background-color: #F6F6F6;
+      padding: 20px;
+      border-radius: 5px;
+      font-size: 18;
+      font-weight: 400;
+    }
+  }

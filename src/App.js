@@ -9,7 +9,7 @@ import Home from './Home';
 import About from './About';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
-import Error from './Components/Error';
+import Logement from './Logement';
 
 
 function App() {
@@ -18,9 +18,9 @@ function App() {
       <Header />
       <Router>
         <Routes>
-            <Route exact path="/"  element ={<Home />}/>
-            <Route exact path="/about"  element ={<About />}/>
-            <Route path="*" element={<Error />} />
+            <Route exact path="/"  element ={<Home />} />
+            <Route exact path="/about"  element ={<About />} />
+            <Route exact path="/details/:id" element = {<Logement />} />
         </Routes>
       </Router>
       <Footer />

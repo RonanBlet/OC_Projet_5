@@ -1,0 +1,48 @@
+.logement{
+    width: 90%;
+    margin-top: 50px;
+    
+}
+
+.logement .carrousel img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.description{
+    display: flex;
+    margin-top: 25px;
+    color: #FF6060;
+}
+
+.description_gauche{
+    width: 90%;
+    
+}
+
+.description_gauche h1{
+    margin: 0;
+    padding: 0;
+}
+
+.description_gauche p{
+   color: black;
+   margin: 0;
+}
+
+.description_droite{
+    display: flex;
+}
+
+.description_droite img{
+    border-radius: 50%;
+    width: 50%;
+}
+
+.listing{
+    display: flex;
+    width: 100%;
+}
+
