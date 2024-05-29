@@ -10,21 +10,27 @@ import About from './About';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Logement from './Logement';
+import NotFound from './NotFound';
 
 
 function App() {
   return (
-    <div class ='body'>
-      <Header />
-      <Router>
-        <Routes>
-            <Route exact path="/"  element ={<Home />} />
-            <Route exact path="/about"  element ={<About />} />
-            <Route exact path="/details/:id" element = {<Logement />} />
-        </Routes>
-      </Router>
+    <body>
+      <div className='wrapper'>
+        <div class ='content'>
+          <Header />
+            <Router>
+              <Routes>
+                  <Route exact path="/"  element ={<Home />} />
+                  <Route exact path="/about"  element ={<About />} />
+                  <Route exact path="/details/:id" element = {<Logement />} />
+                  <Route path='*' element = {<NotFound />}/>
+              </Routes>
+            </Router>
+        </div>
       <Footer />
-    </div>
+      </div>
+    </body>
   );
 }
 

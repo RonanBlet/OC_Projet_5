@@ -13,23 +13,37 @@
 
 .description{
     display: flex;
+    flex-direction: column;
     margin-top: 25px;
     color: #FF6060;
 }
 
-.description_gauche{
-    width: 90%;
-    
+.description_haut{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom:25px;
+}
+
+.description_bas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 25px;
 }
 
 .description_gauche h1{
     margin: 0;
     padding: 0;
+    font-weight: 500;
+    font-size: 36px;
 }
 
 .description_gauche p{
    color: black;
    margin: 0;
+   font-weight: 500;
+   font-size: 18px;
 }
 
 .description_droite{
@@ -38,11 +52,19 @@
 
 .description_droite img{
     border-radius: 50%;
-    width: 50%;
+    width: 64px;
+    height: 64px;
+    margin-left: 10px;
 }
 
 .listing{
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: 100%;
+    margin-bottom: 40px;
 }
 
+.listing span{
+    width: 45%;
+}

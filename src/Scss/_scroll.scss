@@ -1,5 +1,5 @@
 .collapsible {
-    width: 90%;
+    width: 100%;
 
     .toggle-button {
       background-color: #ff6b6b;
@@ -8,20 +8,45 @@
       padding: 15px 20px;
       font-size: 18;
       font-weight: 700;
-      cursor: pointer;
       border-radius: 5px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 100%;
+    }
+
+    .toggle-title{
+      width: 80%;
     }
   
+    .toggle-arrow{
+      width: 20%;
+      text-align: right;
+
+        .down{
+          transform: rotate(180deg);
+        }
+    }
+
+    .toggle-arrow img{
+      transition:transform 0.3s ease;
+      cursor: pointer;
+    }
   
     .content {
       background-color: #F6F6F6;
-      padding: 20px;
+      color: black;
+      padding: 0 0 0 10px;
       border-radius: 5px;
-      font-size: 18;
+      font-size: 18px;
       font-weight: 400;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
+    }
+
+    .open{
+      max-height: 100px;
+      padding: 10px 0 10px 10px;
+      opacity: 1;
     }
   }

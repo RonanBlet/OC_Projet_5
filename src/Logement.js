@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
 import data from './data/data.json';
-import Scroll from "./Components/Scroll";
+import Toggle from "./Components/Toggle";
+import Rating from "./Components/Rating";
+import TagList from "./Components/TagList";
 
 function Logement(){
     const {id} = useParams();
@@ -16,26 +18,38 @@ function Logement(){
                 <img src={logement.pictures[0]} alt=""/>
             </div>
             <div class='description'>
-                <div class='description_gauche'>
-                    <h1>{logement.title}</h1>
-                    <p>{logement.location}</p>
+                <div class='description_haut'>
+                    <div class='description_gauche'>
+                        <h1>{logement.title}</h1>
+                        <p>{logement.location}</p>
+                    </div>
+                    <div class='description_droite'>
+                        <p>{logement.host.name}</p>
+                        <img src={logement.host.picture} alt="Proprietaire du logement"/>
+                    </div>
                 </div>
-                <div class='description_droite'>
-                    <p>{logement.host.name}</p>
-                    <img src={logement.host.picture} alt="Proprietaire du logement"/>
-                    
+                <div className="description_bas">
+                    <div>
+                        <TagList tags={logement.tags}/>
+                    </div>
+                    <div>
+                        <Rating rating={logement.rating}/>
+                    </div>
                 </div>
-            </div>
-            <div class ='listing'>
-                <Scroll
-                title='Description'
-                text={logement.description} 
-                />
-
-                <Scroll
-                title='Equipement'
-                text={logement.equipments}
-                />
+                <div class ='listing'>
+                    <span>
+                        <Toggle
+                        title='Description'
+                        text={logement.description} 
+                        />
+                    </span>
+                    <span>
+                        <Toggle
+                        title='Equipement'
+                        text={logement.equipments}
+                        />
+                    </span>
+                </div>
             </div>
         </div>
     );
