@@ -1,7 +1,7 @@
 import { useState } from "react";
 import fleche from '../Images/Vector.svg';
 
-function Toggle({title,text}){
+function Collapse({title, children}){
     
     const [isOpen, setIsOpen] = useState(false);
 
@@ -18,10 +18,12 @@ function Toggle({title,text}){
                 <span className="toggle-arrow" onClick={toggleCollapsible}>
                     <img src={fleche} className={isOpen ? 'down' : 'up' } alt="Flèche"/>
                 </span>
-                </div>
-        {<div className={`content ${isOpen ? 'open' : ''}`}>{text}</div>}
-    </div>
+            </div>
+            <div className={`toggle-content ${isOpen ? 'open' : ''}`}>
+                {children}
+            </div>
+        </div>
     )
 }
 
-export default Toggle;
+export default Collapse;

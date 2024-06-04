@@ -9,8 +9,8 @@ import Home from './Home';
 import About from './About';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
-import Logement from './Logement';
 import NotFound from './NotFound';
+import Logement from './Logement';
 
 
 function App() {

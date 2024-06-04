@@ -9,18 +9,19 @@
 
 .cardList {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
     width: 90%;
+    gap: 50px;
+    grid-template-columns: repeat(3, 1fr);
     background-color: #F6F6F6;
     border-radius: 25px;
-    padding:50px;
+    padding: 50px;
+    align-items: center;
 }
 
 .card{
     position: relative;
-    
-    
+    width: 100%;
+    height: 100%;
 }
 
 .card img{
@@ -30,6 +31,7 @@
     object-fit: cover;
 }
 
+
 .card h3{
     position: absolute;
     bottom: 10px;
@@ -37,4 +39,18 @@
     color:white;
     font-size: 18px;
     font-family: Montserrat;
+}
+
+.overlayCard{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0,0,0,0.7) 10%, rgba(255,255,255,0) 30%);
+    border-radius: 10px;
+}
+
+@media (max-width : 375px){
+   
 }
