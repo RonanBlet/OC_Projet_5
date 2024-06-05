@@ -15,40 +15,33 @@ function Logement(){
     }
 
     return(
-        <div class="logement">
-            <div class="carrousel">
+        <div className="logement">
+            <div className="carrousel">
                 <Carousel pictures={logement.pictures} />
             </div>
-            <div class='description'>
-                <div class='description_haut'>
-                    <div class='description_gauche'>
+            <div className='description'>
+                <div className='description_haut'>
+                    <div className='description_gauche'>
                         <h1>{logement.title}</h1>
                         <p>{logement.location}</p>
-                    </div>
-                    <div class='description_droite'>
-                        <p>{logement.host.name}</p>
-                        <img src={logement.host.picture} alt="Proprietaire du logement"/>
-                    </div>
-                </div>
-                <div className="description_bas">
-                    <div>
                         <TagList tags={logement.tags}/>
                     </div>
-                    <div>
+                    <div className='description_droite'>
+                        <div className="owner">
+                            <p>{logement.host.name}</p>
+                            <img src={logement.host.picture} alt="Proprietaire du logement"/>
+                        </div>
                         <Rating rating={logement.rating}/>
                     </div>
                 </div>
-                <div class ='listing'>
-                    <span>
-                        <Collapse title='Description'>
+                <div className ='listing'>
+                    <Collapse title='Description'>
                             {logement.description} 
-                        </Collapse>
-                    </span>
-                    <span>
-                        <Collapse title='Equipement'>
+                    </Collapse>
+                    <span id="espace"></span>
+                    <Collapse title='Equipement'>
                             <EquipmentList equipement={logement.equipments} />
-                        </Collapse>
-                    </span>
+                    </Collapse>
                 </div>
             </div>
         </div>

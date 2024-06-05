@@ -1,26 +1,74 @@
-.error{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-}
+$error-color: #FF6060;
+$font-family: 'Montserrat';
+$margin-top-mobile: 30px;
+$font-size-h1-desktop: 288px;
+$font-size-h1-tablet: 140px;
+$font-size-h1-mobile: 96px;
+$font-size-p-desktop: 36px;
+$font-size-p-tablet: 24px;
+$font-size-p-mobile: 18px;
+$font-size-a-desktop: 18px;
+$font-size-a-tablet: 16px;
+$font-size-a-mobile: 14px;
+$margin-top-a: 50px;
 
-.error h1{
-    color : #FF6060;
-    font-size: 288px;
+.error {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 75%;
+
+  h1 {
+    flex: 1;
+    color: $error-color;
+    font-size: $font-size-h1-desktop;
     margin: 0;
-}
 
-.error p{
-    font-weight: 500;
-    color : #FF6060;
-    font-size: 36px;
-    font-family: Montserrat;
-}
+    @media (max-width: 768px) {
+      font-size: $font-size-h1-tablet;
+    }
 
-.error a{
+    @media (max-width: 375px) {
+      font-size: $font-size-h1-mobile;
+    }
+  }
+
+  p {
+    flex: 1;
     font-weight: 500;
-    font-size: 18px;
-    font-family: Montserrat;
+    color: $error-color;
+    font-size: $font-size-p-desktop;
+    font-family: $font-family;
+
+    @media (max-width: 768px) {
+      font-size: $font-size-p-tablet;
+    }
+
+    @media (max-width: 375px) {
+      font-size: $font-size-p-mobile;
+    }
+  }
+
+  a {
+    flex: 1;
+    font-weight: 500;
+    font-size: $font-size-a-desktop;
+    font-family: $font-family;
     color: black;
+    margin-top: $margin-top-a;
+
+    @media (max-width: 768px) {
+      font-size: $font-size-a-tablet;
+    }
+
+    @media (max-width: 375px) {
+      font-size: $font-size-a-mobile;
+    }
+  }
+
+  @media (max-width: 375px) {
+    margin-top: $margin-top-mobile;
+  }
 }

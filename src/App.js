@@ -15,9 +15,8 @@ import Logement from './Logement';
 
 function App() {
   return (
-    <body>
       <div className='wrapper'>
-        <div class ='content'>
+        <div className ='content'>
           <Header />
             <Router>
               <Routes>
@@ -30,7 +29,6 @@ function App() {
         </div>
       <Footer />
       </div>
-    </body>
   );
 }
 

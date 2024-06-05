@@ -1,13 +1,18 @@
-.divAbout{
-    width: 90%;
+$width-about: 90%;
+$width-scroll: 100%;
+$gap-scroll: 30px;
+$margin-bottom-scroll: 50px;
+
+.divAbout {
+  width: $width-about;
 }
 
-.divScroll{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-    margin-bottom: 50px;
+.divScroll {
+  width: $width-scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: $gap-scroll;
+  margin-bottom: $margin-bottom-scroll;
 }

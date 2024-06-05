@@ -1,10 +1,15 @@
 import React from "react";
 import logo from '../Images/LOGO.png';
+import petitLogo from '../Images/LOGO_petit.svg'
+
 function Header(){
     return(
         <header>
             <span>
-                <img src={logo} alt="logo du site Kasa"/>
+                <picture>
+                    <source media="(max-width: 768px)" srcSet={petitLogo} />
+                    <img src={logo} alt="Logo du site Kasa"  />
+                </picture>
             </span>
             <nav>
                 <ul>

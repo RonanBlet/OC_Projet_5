@@ -6,7 +6,7 @@ function Rating({rating}){
     const stars = Array(5).fill(false).map((_, index)=> index < rating);
 
     return(
-        <div>
+        <div className='div-rating'>
             {stars.map((filled, index) => (
                 <img
                 key={index}

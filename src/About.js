@@ -4,7 +4,7 @@ import Collapse from "./Components/Collapse";
 
 function About(){
     return (
-        <div class="divAbout">
+        <div className="divAbout">
             <span>
             <Banner
             image={img}
@@ -12,7 +12,7 @@ function About(){
             showOverlay={false}
             />
             </span>
-            <div class='divScroll'>
+            <div className='divScroll'>
                 <Collapse title='Fiabilité'>
                     <p>
                         Les annonces postées sur Kasa garantissent

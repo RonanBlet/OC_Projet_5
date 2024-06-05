@@ -1,4 +1,6 @@
 import { useState } from "react";
+import fleche from '../Images/carousel_button.svg';
+import petiteFleche from '../Images/carousel_button_petit.svg';
 
 function Carousel({pictures}){
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -14,17 +16,29 @@ function Carousel({pictures}){
 
       return(
         <div className="carousel">
-            <button className="carousel-button left" onClick={prevSlide}>
-                &lt;
-            </button>
-            <img src={pictures[currentIndex]} alt="Logement" className="carousel-image" />
-            <button className="carousel-button right" onClick={nextSlide}>
-                &gt;
-            </button>
-            <div className="carousel-count">
-                {currentIndex+1}/{pictures.length}
-            </div>
-        </div>
+          {pictures.length > 1 && (
+              <button className="carousel-button left" onClick={prevSlide}>
+                  <picture>
+                    <source media="(max-width: 375px)" srcSet={petiteFleche} />
+                    <img src={fleche} alt="Flèche du Carrousel"  />
+                </picture>
+              </button>
+          )}
+          <img src={pictures[currentIndex]} alt="Logement" className="carousel-image" />
+          {pictures.length > 1 && (
+              <button className="carousel-button right" onClick={nextSlide}>
+                  <picture>
+                    <source media="(max-width: 375px)" srcSet={petiteFleche} />
+                    <img src={fleche} alt="Flèche du Carrousel"  />
+                </picture>
+              </button>
+          )}
+          {pictures.length > 1 && (
+              <div className="carousel-count">
+                  {currentIndex + 1}/{pictures.length}
+              </div>
+          )}
+      </div>
       );
 };
 

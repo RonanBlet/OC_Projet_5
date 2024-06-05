@@ -1,6 +1,5 @@
 .banner{
-    margin-top: 50px;
-    height: 250px;
+    height: 220px;
     text-align: center;
     font-family: Montserrat;
     font-size: 48px;
@@ -43,4 +42,26 @@
     height: 100%;
     background:rgba(0,0,0,0.5);
     border-radius: 25px;
+  }
+
+  @media (max-width : 1024px){
+    .banner{
+      height: 180px;
+      font-size: 38px;
+    }
+  }
+
+  @media (max-width : 768px){
+    .banner{
+      height: 150px;
+      font-size: 30px;
+      margin-bottom: 25px;
+    }
+  }
+
+  @media (max-width : 375px){
+    .banner{
+      height: 110px;
+      font-size: 24px;
+    }
   }

@@ -1,56 +1,88 @@
-.divHome{
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 50px;
+$background-color: #F6F6F6;
+$border-radius: 25px;
+$card-height: 340px;
+$card-height-mobile: 255px;
+$gap: 50px;
+$gap-mobile: 25px;
+$text-color: white;
+$font-size: 18px;
+$font-family: 'Montserrat';
+$overlay-gradient: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0) 30%);
+
+.divHome {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 25px;
+  }
 }
 
+.home-background {
+  width: 100%;
+  background-color: $background-color;
+  border-radius: $border-radius;
+}
 
 .cardList {
-    display: grid;
-    width: 90%;
-    gap: 50px;
-    grid-template-columns: repeat(3, 1fr);
-    background-color: #F6F6F6;
-    border-radius: 25px;
-    padding: 50px;
-    align-items: center;
+  display: grid;
+  width: 95%;
+  margin: 2.5%;
+  gap: $gap;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: $background-color;
+  border-radius: $border-radius;
+  align-items: center;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: $gap-mobile;
+  }
+
+  @media (max-width: 375px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
-.card{
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
+.card {
+  position: relative;
+  width: 100%;
+  height: $card-height;
 
-.card img{
+  img {
     width: 100%;
     border-radius: 10px;
     height: 100%;
     object-fit: cover;
-}
+  }
 
-
-.card h3{
+  h3 {
     position: absolute;
     bottom: 10px;
     left: 10px;
-    color:white;
-    font-size: 18px;
-    font-family: Montserrat;
+    color: $text-color;
+    font-size: $font-size;
+    font-family: $font-family;
+  }
+
+  @media (max-width: 375px) {
+    height: $card-height-mobile;
+  }
 }
 
-.overlayCard{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(0deg, rgba(0,0,0,0.7) 10%, rgba(255,255,255,0) 30%);
-    border-radius: 10px;
-}
-
-@media (max-width : 375px){
-   
+.overlayCard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $overlay-gradient;
+  border-radius: 10px;
 }

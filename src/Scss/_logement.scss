@@ -1,7 +1,6 @@
 .logement{
     width: 90%;
     margin-top: 50px;
-    
 }
 
 
@@ -19,13 +18,6 @@
     margin-bottom:25px;
 }
 
-.description_bas{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 25px;
-}
-
 .description_gauche h1{
     margin: 0;
     padding: 0;
@@ -35,20 +27,31 @@
 
 .description_gauche p{
    color: black;
-   margin: 0;
+   margin: 0 0 50px 0;
    font-weight: 500;
    font-size: 18px;
 }
 
 .description_droite{
     display: flex;
+    flex-direction: column;
+    align-items: end;
 }
 
-.description_droite img{
+.description_droite .owner img{
     border-radius: 50%;
     width: 64px;
     height: 64px;
     margin-left: 10px;
+}
+
+.owner{
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.owner p{
+    font-size: 18px;
 }
 
 .listing{
@@ -61,4 +64,76 @@
 
 .listing span{
     width: 45%;
+}
+
+@media (max-width : 768px){
+    .logement{
+        margin-top: 25px;
+    }
+
+    .description_haut{
+        flex-direction: column;
+    }
+
+
+    .description_droite{
+        flex-direction: row-reverse;
+        align-items: start;
+    }
+
+    .description_gauche{
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width : 375px){
+    .description_haut{
+        flex-direction: column;
+    }
+
+    .description_gauche{
+
+        margin-bottom: 30px;
+        
+        h1{
+            font-size: 18px;
+        }
+
+        p{
+            font-size: 14px;
+        }
+    }
+
+    .description_droite{
+        flex-direction: row-reverse;
+        align-items: start;
+        
+
+        .owner{ 
+            
+            margin-bottom: 10px;
+
+            img{
+                width: 32px;
+                height: 32px;
+            }
+
+            p{
+                font-size: 12px;
+            }
+
+        }
+    }
+
+    .listing{
+        flex-direction: column;
+
+        span{
+            width: 100%;
+        }
+    }
+
+    #espace{
+        margin: 15px 0;
+    }
 }

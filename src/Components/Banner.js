@@ -1,9 +1,9 @@
 function Banner({image, text, showOverlay}) {
     return (
-        <div class ='banner'>
-            <div class="img-container">
+        <div className ='banner'>
+            <div className="img-container">
                 <img src={image} alt=""/>
-                {showOverlay && <div class='overlay'></div>}
+                {showOverlay && <div className='overlay'></div>}
             </div>
                 <p>{text}</p>
         </div>
