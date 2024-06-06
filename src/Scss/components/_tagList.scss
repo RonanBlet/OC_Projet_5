@@ -1,12 +1,12 @@
+@import '../variables';
+
 $tag-bg-color: #FF6060;
 $border-radius: 7px;
-$color-white: white;
 $font-weight: 700;
 $font-size-desktop: 14px;
 $font-size-mobile: 10px;
 $padding-y: 5px;
 $padding-x: 20px;
-$font-family: 'Montserrat';
 $margin-right-desktop: 10px;
 $margin-bottom-mobile: 5px;
 
@@ -20,13 +20,13 @@ $margin-bottom-mobile: 5px;
   font-family: $font-family;
   margin-right: $margin-right-desktop;
 
-  @media (max-width: 375px) {
+  @media (max-width: $media-breakpoint-small) {
     font-size: $font-size-mobile;
     margin-bottom: $margin-bottom-mobile;
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: $media-breakpoint-small) {
   .tag-list {
     display: flex;
     flex-wrap: wrap;

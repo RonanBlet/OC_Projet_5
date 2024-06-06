@@ -1,0 +1,18 @@
+@import '../variables';
+
+$margin-large: 15px;
+$margin-small: 2px;
+$scale-small: 0.6;
+
+.star {
+  margin-left: $margin-large;
+
+  @media (max-width: $media-breakpoint-small) {
+    scale: $scale-small;
+    margin-left: $margin-small;
+  }
+}
+
+.div-rating {
+  width: $width-full;
+}

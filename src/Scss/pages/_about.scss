@@ -1,5 +1,6 @@
+@import '../variables';
+
 $width-about: 90%;
-$width-scroll: 100%;
 $gap-scroll: 30px;
 $margin-bottom-scroll: 50px;
 
@@ -7,8 +8,8 @@ $margin-bottom-scroll: 50px;
   width: $width-about;
 }
 
-.divScroll {
-  width: $width-scroll;
+.divCollapse {
+  width: $width-full;
   display: flex;
   flex-direction: column;
   align-items: center;

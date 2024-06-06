@@ -10,17 +10,19 @@ function Collapse({title, children}){
     };
 
     return(
-        <div className="collapsible">
-            <div className="toggle-button">
-                <span className="toggle-title">
+        <div className="collapse">
+            <div className="collapse-button" onClick={toggleCollapsible}>
+                <span className="collapse-title">
                     {title} 
                 </span>
-                <span className="toggle-arrow" onClick={toggleCollapsible}>
+                <span className="collapse-arrow">
                     <img src={fleche} className={isOpen ? 'down' : 'up' } alt="Flèche"/>
                 </span>
             </div>
-            <div className={`toggle-content ${isOpen ? 'open' : ''}`}>
-                {children}
+            <div className={`collapse-content ${isOpen ? 'open' : ''}`}>
+                <div className="collapse-text">
+                    {children}
+                </div>
             </div>
         </div>
     )

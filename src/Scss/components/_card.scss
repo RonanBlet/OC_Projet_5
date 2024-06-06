@@ -1,12 +1,11 @@
-$background-color: #F6F6F6;
+@import '../variables';
+
 $border-radius: 25px;
 $card-height: 340px;
 $card-height-mobile: 255px;
 $gap: 50px;
 $gap-mobile: 25px;
-$text-color: white;
 $font-size: 18px;
-$font-family: 'Montserrat';
 $overlay-gradient: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0) 30%);
 
 .divHome {
@@ -16,13 +15,13 @@ $overlay-gradient: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 
   align-items: center;
   margin-bottom: 50px;
 
-  @media (max-width: 768px) {
+  @media (max-width: $media-breakpoint-medium) {
     margin-bottom: 25px;
   }
 }
 
 .home-background {
-  width: 100%;
+  width: $width-full;
   background-color: $background-color;
   border-radius: $border-radius;
 }
@@ -37,52 +36,56 @@ $overlay-gradient: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 
   border-radius: $border-radius;
   align-items: center;
 
-  @media (max-width: 1024px) {
+  @media (max-width: $media-breakpoint-large) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: $media-breakpoint-medium) {
     grid-template-columns: repeat(1, 1fr);
     gap: $gap-mobile;
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: $media-breakpoint-small) {
     grid-template-columns: repeat(1, 1fr);
   }
 }
 
 .card {
   position: relative;
-  width: 100%;
+  width: $width-full;
   height: $card-height;
 
-  img {
-    width: 100%;
-    border-radius: 10px;
-    height: 100%;
-    object-fit: cover;
+  .img-container {
+    height: $height-full;
+
+    img {
+      width: $width-full;
+      border-radius: 10px;
+      height: $height-full;
+      object-fit: cover;
+    }
+
+    .overlayCard {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $width-full;
+      height: $height-full;
+      background: $overlay-gradient;
+      border-radius: 10px;
+    }
   }
 
   h3 {
     position: absolute;
     bottom: 10px;
     left: 10px;
-    color: $text-color;
+    color: $color-white;
     font-size: $font-size;
     font-family: $font-family;
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: $media-breakpoint-small) {
     height: $card-height-mobile;
   }
-}
-
-.overlayCard {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: $overlay-gradient;
-  border-radius: 10px;
 }

@@ -12,7 +12,7 @@ function About(){
             showOverlay={false}
             />
             </span>
-            <div className='divScroll'>
+            <div className='divCollapse'>
                 <Collapse title='Fiabilité'>
                     <p>
                         Les annonces postées sur Kasa garantissent

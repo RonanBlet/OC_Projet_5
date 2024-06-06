@@ -14,7 +14,7 @@ function Home(){
             showOverlay={true} 
             />
             <div className="home-background">
-                <div class = "cardList">
+                <div className = "cardList">
                     {data.map(item =>(
                         <Card key={item.id} id={item.id} title={item.title} cover={item.cover} />
                     ))}

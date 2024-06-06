@@ -1,5 +1,6 @@
+@import '../variables';
+
 $error-color: #FF6060;
-$font-family: 'Montserrat';
 $margin-top-mobile: 30px;
 $font-size-h1-desktop: 288px;
 $font-size-h1-tablet: 140px;
@@ -11,6 +12,7 @@ $font-size-a-desktop: 18px;
 $font-size-a-tablet: 16px;
 $font-size-a-mobile: 14px;
 $margin-top-a: 50px;
+
 
 .error {
   display: flex;
@@ -26,11 +28,11 @@ $margin-top-a: 50px;
     font-size: $font-size-h1-desktop;
     margin: 0;
 
-    @media (max-width: 768px) {
+    @media (max-width: $media-breakpoint-medium) {
       font-size: $font-size-h1-tablet;
     }
 
-    @media (max-width: 375px) {
+    @media (max-width: $media-breakpoint-small) {
       font-size: $font-size-h1-mobile;
     }
   }
@@ -42,11 +44,11 @@ $margin-top-a: 50px;
     font-size: $font-size-p-desktop;
     font-family: $font-family;
 
-    @media (max-width: 768px) {
+    @media (max-width: $media-breakpoint-medium) {
       font-size: $font-size-p-tablet;
     }
 
-    @media (max-width: 375px) {
+    @media (max-width: $media-breakpoint-small) {
       font-size: $font-size-p-mobile;
     }
   }
@@ -59,16 +61,16 @@ $margin-top-a: 50px;
     color: black;
     margin-top: $margin-top-a;
 
-    @media (max-width: 768px) {
+    @media (max-width: $media-breakpoint-medium) {
       font-size: $font-size-a-tablet;
     }
 
-    @media (max-width: 375px) {
+    @media (max-width: $media-breakpoint-small) {
       font-size: $font-size-a-mobile;
     }
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: $media-breakpoint-small) {
     margin-top: $margin-top-mobile;
   }
 }

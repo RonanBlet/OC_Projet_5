@@ -1,3 +1,5 @@
+@import '../variables';
+
 $carousel-height: 400px;
 $carousel-height-tablet: 330px;
 $carousel-height-mobile: 255px;
@@ -5,7 +7,6 @@ $border-radius: 25px;
 $button-padding: 10px;
 $count-padding: 5px 10px;
 $count-font-size: 14px;
-$color-white: white;
 $color-transparent: rgba(0, 0, 0, 0);
 
 .carousel {
@@ -15,11 +16,11 @@ $color-transparent: rgba(0, 0, 0, 0);
   overflow: hidden;
   border-radius: $border-radius;
 
-  @media (max-width: 768px) {
+  @media (max-width: $media-breakpoint-medium) {
     height: $carousel-height-tablet;
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: $media-breakpoint-small) {
     height: $carousel-height-mobile;
   }
 

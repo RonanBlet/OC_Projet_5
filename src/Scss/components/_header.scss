@@ -1,0 +1,58 @@
+@import '../variables';
+
+$header-padding: 50px;
+$header-padding-small: 25px;
+$font-size-large: 24px;
+$font-size-medium: 18px;
+$font-size-small: 14px;
+$font-weight: 500;
+$margin-left: 25px;
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: $width-90;
+  padding-top: $header-padding;
+  padding-bottom: $header-padding;
+
+  nav {
+    width: $width-50;
+
+    ul {
+      display: flex;
+      float: right;
+      list-style-type: none;
+      padding: 0;
+
+      a {
+        text-decoration: none;
+        color: $color-black;
+        font-weight: $font-weight;
+        font-size: $font-size-large;
+        margin-left: $margin-left;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $media-breakpoint-medium) {
+  header {
+    padding-top: $header-padding-small;
+    padding-bottom: $header-padding-small;
+  }
+
+  nav ul a {
+    font-size: $font-size-medium;
+  }
+}
+
+@media (max-width: $media-breakpoint-small) {
+  nav ul li a {
+    font-size: $font-size-small;
+  }
+}
